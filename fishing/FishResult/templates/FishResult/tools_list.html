@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}道具一覧{% endblock title %}
+
+{% block content %}
+<div class="responsive-navigation visible-sm visible-xs">
+    <a href="#" class="menu-toggle-btn">
+        <i class="fa fa-bars fa-2x"></i>
+    </a>
+    <div class="navigation responsive-menu">
+        <ul>
+            <li class="home"><a href="#templatemo">ロッド</a></li>
+          <li class="about"><a href="#about">リール</a></li>
+          <li class="services"><a href="#services">ライン</a></li>
+          <li class="portfolio"><a href="#portfolio">仕掛け</a></li>
+          <li class="contact"><a href="#contact">ルアー</a></li>
+        </ul>
+    </div>
+</div>
+<!-- 上部サブメニュー-->
+<!-- サイドサブメニュー -->
+<div id="main-sidebar" class="hidden-xs hidden-sm">
+  <div class="logo">
+    <a href="#"><h1>道具</h1></a>
+    <span>Tool Menu's</span>
+  </div><!--  ロゴ -->
+
+  <div class="navigation">
+        <ul class="main-menu">
+            <li class="home"><a href="#templatemo">ロッド</a></li>
+            <li class="about"><a href="#about">リール</a></li>
+            <li class="services"><a href="#services">ライン</a></li>
+            <li class="portfolio"><a href="#portfolio">仕掛け</a></li>
+            <li class="contact"><a href="#contact">ルアー</a></li>
+        </ul>
+  </div>
+</div>
+<div id="main-content">
+  <h3 class="page-header">道具の一覧</h3>
+    <div id="main-content-blank">
+      <h4 class="blank-posision">
+        <a href="{% url 'FishResult:tools_add' %}" class="btn btn-default btn">追加</a>
+        <a href="{% url 'FishResult:toppage' %}" class="btn btn-default btn">戻る</a>
+      </h4>
+    </div>
+  <div id="main-content-tool">
+  <table class="table table-striped table-hover">
+     <thead>
+       <tr>
+         <th>ID</th>
+         <th>長さ</th>
+
+       </tr>
+     </thead>
+     <tbody>
+       {% for rod in rodlist %}
+       <tr>
+         <td>{{ rod.rod_id }}</td>
+         <td>{{ rod.length }}</td>
+
+           <a href="{% url 'FishResult:tools_mod' product_id=rod.rod_id %}" class="btn btn-default btn-sm">修正</a>
+           <!-- <a href="{% url 'cms:book_del' book_id=book.id %}" class="btn btn-default btn-sm">削除</a> -->
+         </td>
+       </tr>
+       {% endfor %}
+     </tbody>
+   </table>
+ </diV>
+ </div>
+
+{% endblock content%}
