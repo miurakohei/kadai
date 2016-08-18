@@ -1,0 +1,1 @@
+web: gunicorn --env DJANGO_SETTINGS_MODULE=fishing.settings fishing.wsgi --log-file -

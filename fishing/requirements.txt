@@ -1,0 +1,5 @@
+Django==1.9.8
+gunicorn==19.5.0
+django-bootstrap-form==3.2.1
+Pillow==3.3.0
+whitenoise==3.2

@@ -1,0 +1,20 @@
+{% extends "map_base.html" %}
+
+
+{% block title %}道具の編集{% endblock title %}
+
+{% block content %}
+<!-- 地図のキャンパス -->
+
+
+<div class="map-embed">
+	<div id="map-canvas">ここに地図が表示されます</div>
+</div>
+
+<div class="map-button">
+  <a href="{% url 'FishResult:album' %}" class="btn btn-default btn-lg">アルバム</a>
+  <a href="{% url 'FishResult:toppage' %}" class="btn btn-success btn-lg">トップ</a>
+</div>
+
+
+{% endblock content %}

@@ -1,0 +1,48 @@
+{% extends "base2.html" %}
+
+{% block title %}書籍の一覧{% endblock title %}
+
+{% block extrahead %}
+<style>
+table {
+  margin-top: 8px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+    <h3 class="page-header">セットの一覧</h3>
+    <a href="{% url 'FishResult:set_add' %}" class="btn btn-default btn-sm">追加</a>
+    <a href="{% url 'FishResult:toppage' %}" class="btn btn-default btn-sm">戻る</a>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>名称</th>
+          <th>ロッド</th>
+          <th>リール</th>
+          <th>ライン</th>
+          <th>ルアー</th>
+          <th>ワーム</th>
+          <th>仕掛け</th>
+          <th>操作</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for set in setlist %}
+        <tr>
+          <td>{{ set.set_name }}</td>
+          <td>{{ set.rod_id.rod_name }}</td>
+          <td>{{ set.reel_id.reel_name }}</td>
+          <td>{{ set.line_id.line_name }}</td>
+          <td>{{ set.rure_id.rure_name }}</td>
+          <td>{{ set.worm_id.worm_name }}</td>
+          <td>{{ set.gimmic_id.gimmic_name }}</td>
+          <td>
+            <a href="{% url 'FishResult:set_mod' set_id=set.set_id %}" class="btn btn-default btn-sm">修正</a>
+            <a href="{% url 'FishResult:set_del' set_id=set.set_id %}" class="btn btn-default btn-sm">削除</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+{% endblock content %}

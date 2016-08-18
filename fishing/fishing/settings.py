@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
@@ -124,10 +124,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join( 'staticfiles')
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR,'static'),
 )
 
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 SETTINGS_PATH = os.path.normpath(os.path.dirname(__file__))
 TEMPLATE_DIRS = (
@@ -136,5 +138,5 @@ TEMPLATE_DIRS = (
 
 #画像Upload用
 MEDIA_URL = '/'
-BASE_PATH = os.path.abspath(os.path.split(__file__)[0])
-MEDIA_ROOT = os.path.join(BASE_PATH, 'static')
+# BASE_PATH = os.path.abspath(os.path.split(__file__)[0])
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
