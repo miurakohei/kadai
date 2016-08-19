@@ -11,7 +11,7 @@
     <a href="#" class="menu-toggle-btn">
         <i class="fa fa-bars fa-2x"></i>
     </a>
-    <div class="navigation responsive-menu">
+    <div class="responsive-menu">
         <ul>
           <li class="portfolio"><a href="{% url 'FishResult:tools_list' %}">ALL</a></li>
           <li class="home"><a href="{% url 'FishResult:tools_list_rod' %}" >ロッド</a></li>
@@ -44,13 +44,8 @@
 
 </div>
 <div id="main-content">
-  <h3 class="page-header">道具の一覧</h3>
-    <div id="main-content-blank">
-      <h4 class="blank-posision">
-        <a href="{% url 'FishResult:worm_add' %}" class="btn btn-default btn">追加</a>
-        <a href="{% url 'FishResult:toppage' %}" class="btn btn-default btn">戻る</a>
-      </h4>
-    </div>
+  <h3 class="page-header">ワームの一覧</h3>
+
   <div id="main-content-tool">
     <table class="table table-striped table-bordered">
       <thead>
@@ -68,13 +63,21 @@
          <td>{{ product.product_name }}</td>
          <td>{{ product.use_id }}</td>
          <td>
-           <a href="{% url 'FishResult:worm_mod' product_id=product.product_id %}" class="btn btn-default btn-sm">修正</a>
-           <a href="{% url 'FishResult:tools_del' product_id=product.product_id %}" class="btn btn-default btn-sm">削除</a>
+           <a href="{% url 'FishResult:worm_mod' product_id=product.product_id %}" class="btn btn-default btn-sm">詳細/修正</a>
+           <a href="{% url 'FishResult:tools_del' product_id=product.product_id %}" class="btn btn-danger btn-sm">削除</a>
          </td>
       </tr>
        {% endfor %}
        </ul>
      </tbody>
    </table>
+ </div>
+ <div id="main-content-blank">
+   <h4 class="blank-posision">
+     <a href="{% url 'FishResult:worm_add' %}" class="btn btn-default btn">追加</a>
+     <a href="{% url 'FishResult:toppage' %}" class="btn btn-success btn">Top</a>
+   </h4>
+ </div>
+
 
 {% endblock content %}

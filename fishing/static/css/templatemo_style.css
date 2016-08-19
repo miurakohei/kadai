@@ -18,28 +18,33 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', Arial, Helvetice Neue, sans-s
 
 #main-content, .full-width-slider { float: right; width: 77%; }
 
-#main-content-blank, .blank{float: right; width:100%; }
+#main-content-blank, .blank{float: right; width:100%; align: bottom; }
 
 #main-content-tool, .notfull-with-slider {float: center; width: 50% ; margin: 30px;}
 
-.blank-posision {float:right ; margin-right: 300px;}
+
+
+.blank-posision {float:right ; margin-right: 40%;}
 
 .section-content { padding: 0 7%; margin-bottom: 100px; }
 
 .section-title { border-top: 4px solid; margin-bottom: 60px; }
 .section-title h2 { display: inline-block; padding: 20px 35px; color: white; text-transform: uppercase; font-weight: 300; margin: 0; font-size: 20px; }
 
-#about .section-title { border-color: #e09d1a; }
+#about .section-title { border-color: #e09d1a; margin-top: 55px;}
 #about h2 { background-color: #e9b144; }
 
-#services .section-title { border-color: #7c1fe5; }
-#services h2 { background-color: #974dea; }
+#services .section-title { border-color: #7c1fe5;margin-top: 55px ;  }
+#services h2 { background-color: #974dea;  }
 
-#portfolio .section-title { border-color: #1dcb7c; }
+#portfolio .section-title { border-color: #1dcb7c; margin-top: 55px; }
 #portfolio h2 { background-color: #38e395; }
 
-#contact .section-title { border-color: #cb1d62; }
+#contact .section-title { border-color: #cb1d62; margin-top: 55px; }
 #contact h2 { background-color: #e3387c; }
+
+#map .section-title { border-color: #00FFFF; }
+#map h2 { background-color: #A9F5F2; }
 
 a.largeButton { color: white; text-transform: uppercase; font-weight: 700; font-size: 14px; display: inline-block; padding: 10px 20px; border-bottom: 3px solid; }
 
@@ -100,6 +105,14 @@ a.menu-toggle-btn i { line-height: 60px; }
 .slider-caption { position: absolute; vertical-align: middle; width: 100%; text-align: center; height: 100; z-index: 8; color: white; top: 200px; }
 .slider-caption h2 { font-size: 48px; text-transform: uppercase; font-weight: 800; margin-bottom: 30px; }
 .slider-caption p { font-size: 16px; text-transform: uppercase; letter-spacing: 2px; width: 50%; margin: 0 auto 30px auto; line-height: 1.8em; }
+
+.slider-caption2 { position: fixed; vertical-align: middle; width: 100%;  text-align: right; height: 100; z-index: 8; right :0;color: white; top: 0; background-color: rgba(66, 66, 66, 0.8) ;}
+.slider-caption h3 { font-size: 20px}
+.slider-caption2 a:link {color:white;}
+.slider-caption2 a:visited{color:white;}
+.slider-caption2 a:hover{color:#58ACFA; text-decoration: underline;}
+.slider-caption2 a:active{color:#58ACFA;}
+
 
 .flexslider { background-color: black; height: 570px; overflow: hidden; margin: 0; }
 
