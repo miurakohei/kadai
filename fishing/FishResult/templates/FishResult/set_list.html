@@ -1,4 +1,4 @@
-{% extends "base2.html" %}
+{% extends "base.html" %}
 
 {% block title %}書籍の一覧{% endblock title %}
 
@@ -11,10 +11,11 @@ table {
 {% endblock %}
 
 {% block content %}
+<div class="container">
     <h3 class="page-header">セットの一覧</h3>
     <a href="{% url 'FishResult:set_add' %}" class="btn btn-default btn-sm">追加</a>
     <a href="{% url 'FishResult:toppage' %}" class="btn btn-success btn-sm">Top</a>
-    <table class="table table-striped table-bordered">
+    <table id="datatable" class="table table-striped table-bordered">
       <thead>
         <tr>
           <th>名称</th>
@@ -36,4 +37,6 @@ table {
         {% endfor %}
       </tbody>
     </table>
+  </div>
+  
 {% endblock content %}

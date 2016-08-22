@@ -43,8 +43,8 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', Arial, Helvetice Neue, sans-s
 #contact .section-title { border-color: #cb1d62; margin-top: 55px; }
 #contact h2 { background-color: #e3387c; }
 
-#map .section-title { border-color: #00FFFF; }
-#map h2 { background-color: #A9F5F2; }
+#map .section-title { border-color: #01DFD7; margin-top: 55px;}
+#map h2 { background-color: #00FFFF; }
 
 a.largeButton { color: white; text-transform: uppercase; font-weight: 700; font-size: 14px; display: inline-block; padding: 10px 20px; border-bottom: 3px solid; }
 
@@ -107,12 +107,11 @@ a.menu-toggle-btn i { line-height: 60px; }
 .slider-caption p { font-size: 16px; text-transform: uppercase; letter-spacing: 2px; width: 50%; margin: 0 auto 30px auto; line-height: 1.8em; }
 
 .slider-caption2 { position: fixed; vertical-align: middle; width: 100%;  text-align: right; height: 100; z-index: 8; right :0;color: white; top: 0; background-color: rgba(66, 66, 66, 0.8) ;}
-.slider-caption h3 { font-size: 20px}
+.slider-caption2 h3 {font-size: 1.5em;}
 .slider-caption2 a:link {color:white;}
 .slider-caption2 a:visited{color:white;}
 .slider-caption2 a:hover{color:#58ACFA; text-decoration: underline;}
 .slider-caption2 a:active{color:#58ACFA;}
-
 
 .flexslider { background-color: black; height: 570px; overflow: hidden; margin: 0; }
 

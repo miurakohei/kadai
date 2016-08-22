@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block title %}釣果情報{% endblock title %}
+{% block title %}FishResult{% endblock title %}
 
 {% block content %}
 <!-- <div id="follownav" class="hide"><div class="follownavwrap"><a href="#"></a>
@@ -55,17 +55,17 @@
 				<div class="flexslider">
 					<ul class="slides">
               <div class="slider-caption2">
-                <h3><a href="#about">道具一覧　</a>
-                <a href="#services">セット一覧　</a>
-                <a href="#portfolio">釣果登録　</a>
-                <a href="#contact">アルバム　</a>
-                <a href="#map">マップ　</a>
+                <h3><a href="#about">Tools　</a>
+                <a href="#services">Set　</a>
+                <a href="#portfolio">Result　</a>
+                <a href="#contact">Album　</a>
+                <a href="#map">Map　</a>
               </h3>
               </div>
             <li>
 							<div class="slider-caption">
 								<h2>釣果登録情報サイト</h2>
-								<p>コメントコメントコメントコメント</p>
+								<p></p>
 								<!-- <a href="#" class="largeButton homeBgColor">Read More</a> -->
 							</div>
 							<img src="{{ MEDIA_URL }}/static/images/slide4.jpg" alt="Slide 1">
@@ -81,8 +81,8 @@
 	　<div class="row">
 			<div class="col-md-12">
 				<div class="welcome-text">
-					<h2>Welcome to 釣人</h2>
-					<p>説明文</p>
+					<h2>Welcome to this page</h2>
+					<p></p>
 				</div>
 			</div>
 		</div>
@@ -96,7 +96,7 @@
 				<div class="row">
 					<div class="col-md-12">
 						<div class="section-title">
-							<h2>道具一覧</h2>
+							<h2>Tools</h2>
 						</div>
 					</div>
 				</div>
@@ -105,17 +105,18 @@
 				</div> <!-- /.row -->
 				<div class="row our-story">
 					<div class="col-md-8">
-						<h3>道具の追加や削除など</h3>
-					  	このページでは、道具の一覧を見ることができます。<br>
-              また、道具の登録や削除を行えます。<br>
+						<h3>Such as adding or removing tools.</h3>
+
+              In this page , you can see a list of tools.<br>
+              In addition , you can register or delete tools.<br>
               <br>
-              <a href= "{% url 'FishResult:tools_list' %}" class="btn btn-info btn-lg">道具一覧ページへ</a>
+              <a href= "{% url 'FishResult:tools_list' %}" class="btn btn-info btn-lg">jump page</a>
 					</div>
-					<div class="col-md-4">
+					<!-- <div class="col-md-4">
 						<div class="story-image">
 							<a href= "{% url 'FishResult:tools_list' %}"><img src="{{ MEDIA_URL }}/static/images/responsive-design.jpg" alt="道具一覧へ"></a>
 						</div>
-					</div>
+					</div> -->
 				</div> <!-- /.row -->
 			</div>
 
@@ -125,7 +126,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-title">
-            <h2>セット一覧</h2>
+            <h2>Set</h2>
           </div>
         </div>
       </div>
@@ -134,17 +135,17 @@
       </div> <!-- /.row -->
       <div class="row our-story">
         <div class="col-md-8">
-          <h3>セットの追加や削除など</h3>
-            このページでは、セットの一覧を見ることができます。<br>
-            また、セットの登録や削除を行えます。<br>
+          <h3>Such as adding or removing sets.</h3>
+          In this page , you can see a list of sets.<br>
+          In addition , you can register or delete sets.<br>
             <br>
-            <a href= "{% url 'FishResult:set_list'  %}"class="btn btn-info btn-lg">セット一覧ページへ</a>
+            <a href= "{% url 'FishResult:set_list'  %}"class="btn btn-info btn-lg">jump page</a>
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <div class="story-image">
             <a href= "{% url 'FishResult:set_list' %}"><img src="{{ MEDIA_URL }}/static/images/responsive-design.jpg" alt="セット一覧へ"></a>
           </div>
-        </div>
+        </div> -->
       </div> <!-- /.row -->
     </div>
 
@@ -153,7 +154,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-title">
-            <h2>釣果登録</h2>
+            <h2>Result</h2>
           </div>
         </div>
       </div>
@@ -162,17 +163,18 @@
       </div> <!-- /.row -->
       <div class="row our-story">
         <div class="col-md-8">
-          <h3>釣果の登録</h3>
-            このページでは、魚を釣った場所の登録。<br>
-            釣りあげたタックルの記録を行えます。<br>
+          <h3>Fish Result</h3>
+
+          In this page , registration of place that caught the fish , <br>
+          you can record the tackle was caught .<br>
             <br>
-            <a href= "{% url 'FishResult:fishing_registration' %}" class="btn btn-info btn-lg">釣果登録ページへ</a>
+            <a href= "{% url 'FishResult:fishing_registration' %}" class="btn btn-info btn-lg">jump page</a>
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <div class="story-image">
             <a href= "{% url 'FishResult:fishing_registration' %}"><img src="{{ MEDIA_URL }}/static/images/responsive-design.jpg" alt="釣果登録へ"></a>
           </div>
-        </div>
+        </div> -->
       </div> <!-- /.row -->
     </div>
 
@@ -181,7 +183,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-title">
-            <h2>マップ</h2>
+            <h2>Album</h2>
           </div>
         </div>
       </div>
@@ -190,18 +192,18 @@
       </div> <!-- /.row -->
       <div class="row our-story">
         <div class="col-md-8">
-          <h3>アルバム</h3>
+          <h3>Album</h3>
+            You can see a list of photos that have been<br>
+             registered in the fishing .<br>
             <br>
-            釣果に登録された写真の一覧を見ることが出来ます。
             <br>
-            <br>
-            <a href= "{% url 'FishResult:album' %}" class="btn btn-info btn-lg">アルバムページへ</a>
+            <a href= "{% url 'FishResult:album' %}" class="btn btn-info btn-lg">jump page</a>
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <div class="story-image">
             <a href= "{% url 'FishResult:tools_list' %}"><img src="{{ MEDIA_URL }}/static/images/responsive-design.jpg" alt="道具一覧へ"></a>
           </div>
-        </div>
+        </div> -->
       </div> <!-- /.row -->
     </div>
 
@@ -209,7 +211,7 @@
       <div class="row">
         <div class="col-md-12">
           <div class="section-title">
-            <h2>マップ</h2>
+            <h2>Map</h2>
           </div>
         </div>
       </div>
@@ -218,17 +220,18 @@
       </div> <!-- /.row -->
       <div class="row our-story">
         <div class="col-md-8">
-          <h3>スポット</h3>
-            魚が釣れたポイントを一目で見ることができます。
+          <h3>Map</h3>
+
+            You can see the point at which the fish was caught at a glance .
             <br>
             <br>
-            <a href= "{% url 'FishResult:map' %}" class="btn btn-info btn-lg">マップページへ</a><br>
+            <a href= "{% url 'FishResult:map' %}" class="btn btn-info btn-lg">jump page</a><br>
         </div>
-        <div class="col-md-4">
+        <!-- <div class="col-md-4">
           <div class="story-image">
             <a href= "{% url 'FishResult:tools_list' %}"><img src="{{ MEDIA_URL }}/static/images/responsive-design.jpg" alt="道具一覧へ"></a>
           </div>
-        </div>
+        </div> -->
       </div> <!-- /.row -->
     </div>
 

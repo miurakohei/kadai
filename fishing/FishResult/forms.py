@@ -10,7 +10,7 @@ class ProductForm(ModelForm):
         model=product_master
         fields = ('product_id', 'product_name',
                 'maker_id', 'use_id','image',
-                'classification', 'user_id')
+                'user_id')
 
 
 class RodForm(ModelForm):
