@@ -83,7 +83,10 @@ def set_list(request):
 
 def map(request):
     """マップ画面"""
-    return render(request,'FishResult/map.html')
+    markerlist = fish_result.objects.all()
+    return render(request,
+                'FishResult/map.html',
+                {'markerlist':markerlist})
 
 
 def form_map(request):
@@ -93,7 +96,10 @@ def form_map(request):
 
 def album(request):
     """アルバム画面"""
-    return render(request,'FishResult/album.html')
+    fishresult =  fish_result.objects.all()
+    return render(request,
+                'FishResult/album.html',
+                {'resultlist': fishresult})
 
 
 # def tools_edit(request, product_id=None):
@@ -128,6 +134,7 @@ def rod_edit(request, product_id=None):
         product_form = ProductForm(request.POST, request.FILES, prefix='product',instance = product )
         rod_form = RodForm(request.POST, request.FILES, prefix='rod', instance = rod)
         if product_form.is_valid() & rod_form.is_valid():
+            product.classification = 1
             product = product_form.save(commit=False)
             rod = rod_form.save(commit=False)
             product.save()
@@ -158,6 +165,7 @@ def reel_edit(request, product_id=None):
         product_form = ProductForm(request.POST, request.FILES, prefix='product',instance = product )
         reel_form = ReelForm(request.POST, request.FILES, prefix='reel', instance = reel)
         if product_form.is_valid() & reel_form.is_valid():
+            product.classification = 2
             product = product_form.save(commit=False)
             reel = reel_form.save(commit=False)
             product.save()
@@ -188,6 +196,7 @@ def line_edit(request, product_id=None):
         product_form = ProductForm(request.POST, request.FILES, prefix='product',instance = product )
         line_form = LineForm(request.POST, request.FILES, prefix='line', instance = line)
         if line_form.is_valid() & product_form.is_valid():
+            product.classification = 3
             product = product_form.save(commit=False)
             line = line_form.save(commit=False)
             product.save()
@@ -218,6 +227,7 @@ def rure_edit(request, product_id=None):
         product_form = ProductForm(request.POST, request.FILES, prefix='product',instance = product )
         rure_form = RureForm(request.POST, request.FILES, prefix='rure', instance = rure)
         if rure_form.is_valid() & product_form.is_valid():
+            product.classification = 4
             product = product_form.save(commit=False)
             rure = rure_form.save(commit=False)
             product.save()
@@ -248,6 +258,7 @@ def gimmic_edit(request, product_id=None):
         product_form = ProductForm(request.POST, request.FILES, prefix='product',instance = product)
         gimmic_form = GimmicForm(request.POST, request.FILES, prefix='gimmic', instance = gimmic)
         if gimmic_form.is_valid() & product_form.is_valid():
+            product.classification = 6
             product = product_form.save(commit=False)
             gimmic = gimmic_form.save(commit=False)
             product.save()
@@ -277,6 +288,7 @@ def worm_edit(request, product_id=None):
         product_form = ProductForm(request.POST, request.FILES, prefix='product',instance = product)
         worm_form = WormForm(request.POST, request.FILES, prefix='worm', instance = worm)
         if worm_form.is_valid() & product_form.is_valid():
+            product.classification = 5
             product = product_form.save(commit=False)
             worm = worm_form.save(commit=False)
             product.save()
@@ -354,11 +366,11 @@ def result_edit(request, result_id=None):
         result = fish_result()
 
     if request.method == 'POST':
-        form = ResultForm(request.POST, instance=result)
+        form = ResultForm(request.POST, request.FILES, instance=result)
         if form.is_valid():
             result = form.save(commit=False)
             result.save()
-            return redirect('FishResult:top')
+            return redirect('FishResult:toppage')
     else:
         form=ResultForm(instance=result)
 

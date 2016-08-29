@@ -139,4 +139,4 @@ TEMPLATE_DIRS = (
 #画像Upload用
 MEDIA_URL = '/'
 # BASE_PATH = os.path.abspath(os.path.split(__file__)[0])
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static')

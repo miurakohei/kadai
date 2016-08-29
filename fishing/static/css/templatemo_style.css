@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 { font-family: 'Open Sans', Arial, Helvetice Neue, sans-s
 
 #main-content-blank, .blank{float: right; width:100%; align: bottom; }
 
-#main-content-tool, .notfull-with-slider {float: center; width: 50% ; margin: 30px;}
+#main-content-tool, .notfull-with-slider {float: center; width: 50% ; margin-left: 10em;margin-bottom: 1em;}
 
 
 

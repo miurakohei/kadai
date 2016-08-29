@@ -74,3 +74,10 @@ class UserAdmin(admin.ModelAdmin):
     list_display = ('user_id', 'user_name')
     list_display_links = ['user_id']
 admin.site.register(user_master, UserAdmin)
+
+class FishResultAdmin(admin.ModelAdmin):
+    list_display = ('result_id','set_id','comment',
+                    'latitude','longitude','create_time',
+                    'image','user')
+    list_display_links = ['result_id']
+admin.site.register(fish_result, FishResultAdmin)
