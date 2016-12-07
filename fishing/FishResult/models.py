@@ -74,7 +74,11 @@ class use_master(models.Model):
     """用途マスタ"""
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     use_id = models.AutoField("用途ID", primary_key=True, default=0)
+=======
+    use_id = models.AutoField("用途ID", primary_key=True)
+>>>>>>> 8906134308927766bd4832eb6c2b019fd624c2ff
 =======
     use_id = models.AutoField("用途ID", primary_key=True)
 >>>>>>> 8906134308927766bd4832eb6c2b019fd624c2ff
@@ -159,7 +163,11 @@ class fish_result(models.Model):
     """釣果登録テーブル"""
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     result_id = models.AutoField("釣果ID", primary_key=True)
+=======
+    result_id =models.AutoField(primary_key=True)
+>>>>>>> 8906134308927766bd4832eb6c2b019fd624c2ff
 =======
     result_id =models.AutoField(primary_key=True)
 >>>>>>> 8906134308927766bd4832eb6c2b019fd624c2ff

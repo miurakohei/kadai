@@ -5,8 +5,11 @@ Pillow==3.3.0
 whitenoise==3.2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 dj-database-url==0.4.1
 psycopg2==2.6.2
+=======
+>>>>>>> 8906134308927766bd4832eb6c2b019fd624c2ff
 =======
 >>>>>>> 8906134308927766bd4832eb6c2b019fd624c2ff
 =======

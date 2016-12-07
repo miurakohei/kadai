@@ -87,10 +87,14 @@ DATABASES = {
 }
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=400)
 DATABASES['default'].update(db_from_env)
 #12gatu
+=======
+
+>>>>>>> 8906134308927766bd4832eb6c2b019fd624c2ff
 =======
 
 >>>>>>> 8906134308927766bd4832eb6c2b019fd624c2ff
