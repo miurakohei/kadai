@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}アルバム{% endblock title %}
+
+{% block extrahead %}
+<style>
+table {
+  margin-top: 8px;
+}
+
+.button
+{
+  position: relative ;
+  margin-top: 2% ;
+  text-align: right;
+  right: 10%;
+  overflow: hidden ;
+
+}
+</style>
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <h3 class="page-header">Album</h3>
+
+    <div class="row">
+        {% for result in resultlist %}
+            <div class="col-md-2">
+              {% if result.image %}
+                <a href="{% url 'FishResult:map' %}" class="thumbnail">
+                  <img src="/static{{ result.image.url }}" ></a>
+                </a>
+              {% else %}
+                <a href="{% url 'FishResult:map' %}" class="thumbnail">
+                  <img src="/static/images/noimage.png" ></a>
+                </a>
+              {% endif %}
+            </div>
+        {% endfor %}
+     </div>
+
+</div>
+    <div class = "button">
+      <a href="{% url 'FishResult:map' %}" class="btn btn-default btn">Map</a>
+      <a href="{% url 'FishResult:toppage' %}" class="btn btn-success btn">Top</a>
+    </div>
+
+
+
+{% endblock content %}

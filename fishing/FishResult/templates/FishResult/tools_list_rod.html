@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %}道具一覧{% endblock title %}
+
+
+
+{% block content %}
+
+
+<div class="responsive-navigation visible-sm visible-xs">
+    <a href="#" class="menu-toggle-btn">
+        <i class="fa fa-bars fa-2x"></i>
+    </a>
+    <div class="responsive-menu">
+        <ul>
+          <li class="portfolio"><a href="{% url 'FishResult:tools_list' %}">ALL</a></li>
+          <li class="home"><a href="{% url 'FishResult:tools_list_rod' %}" >ロッド</a></li>
+          <li class="about"><a href="{% url 'FishResult:tools_list_reel' %}">リール</a></li>
+          <li class="services"><a href="{% url 'FishResult:tools_list_line' %}">ライン</a></li>
+          <li class="portfolio"><a href="{% url 'FishResult:tools_list_gimmic' %}">仕掛け</a></li>
+          <li class="contact"><a href="{% url 'FishResult:tools_list_rure' %}">ルアー</a></li>
+          <li class="home"><a href="{% url 'FishResult:tools_list_worm' %}" >ワーム</a></li>
+        </ul>
+    </div>
+</div>
+<!-- 上部サブメニュー-->
+<!-- サイドサブメニュー -->
+<div id="main-sidebar" class="hidden-xs hidden-sm">
+  <div class="logo">
+    <a href="#"><h1>道具</h1></a>
+    <span>Tool Menu's</span>
+  </div><!--  ロゴ -->
+
+
+        <ul class="main-menu">
+            <li class="portfolio"><a href="{% url 'FishResult:tools_list' %}">ALL</a></li>
+            <li class="home"><a href="{% url 'FishResult:tools_list_rod' %}" >ロッド</a></li>
+            <li class="about"><a href="{% url 'FishResult:tools_list_reel' %}">リール</a></li>
+            <li class="services"><a href="{% url 'FishResult:tools_list_line' %}">ライン</a></li>
+            <li class="portfolio"><a href="{% url 'FishResult:tools_list_gimmic' %}">仕掛け</a></li>
+            <li class="contact"><a href="{% url 'FishResult:tools_list_rure' %}">ルアー</a></li>
+            <li class="home"><a href="{% url 'FishResult:tools_list_worm' %}" >ワーム</a></li>
+        </ul>
+
+</div>
+<div id="main-content">
+  <h3 class="page-header">ロッドの一覧</h3>
+
+  <div id="main-content-tool">
+    <table id="datatable" class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>名称</th>
+          <th>用途</th>
+          <th>操作</th>
+
+        </tr>
+      </thead>
+
+     <tbody>
+       {% for product in productlist %}
+
+       <tr>
+         <td>{{ product.product_name }}</td>
+         <td>{{ product.use_id }}</td>
+         <td>
+           <a href="{% url 'FishResult:rod_mod' product_id=product.product_id %}" class="btn btn-default btn-sm">詳細/修正</a>
+           <a href="{% url 'FishResult:tools_del' product_id=product.product_id %}" class="btn btn-danger btn-sm">削除</a>
+         </td>
+      </tr>
+       {% endfor %}
+       </ul>
+     </tbody>
+   </table>
+ </div>
+   <div id="main-content-blank">
+     <h4 class="blank-posision">
+       <a href="{% url 'FishResult:rod_add' %}" class="btn btn-default btn">追加</a>
+       <a href="{% url 'FishResult:toppage' %}" class="btn btn-success btn">Top</a>
+     </h4>
+   </div>
+
+{% endblock content %}
